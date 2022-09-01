@@ -1,0 +1,67 @@
+<div class="row mt-3 mx-3" style="margin-top:25px ;">
+    <div class="col-md-9 justify-content-center">
+      <div class="card card-custom pb-4">
+        <div class="card-body mt-0 mx-5">
+          <div class="text-center mb-3 pb-2 mt-3">
+            <h4 style="color: #495057 ;">Form Validation</h4>
+          </div>
+  
+          <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm" class="mb-0">
+  
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="typeEmail">Email</label>
+                  <input type="email" name="email" ngModel class="form-control" id="typeEmail" class="form-control input-custom" />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form9Example2">Password</label>
+                  <input type="pass" name="pass" ngModel class="form-control" id="form9Example2" class="form-control input-custom" />
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form9Example6">Address</label>
+                  <input type="add" name="add" ngModel class="form-control" id="form9Example6" class="form-control input-custom" />               
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form9Example6">Address 2</label>
+                  <input type="add2" name="add2" ngModel class="form-control" id="form9Example6" class="form-control input-custom" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="row mb-4">
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form9Example3">City</label>
+                  <select id="inputState" name="state" ngModel class="form-control" class="form-control">
+                    <option *ngFor="let s of state" selected>{{s.state}}</option>
+                  </select>          
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-outline">
+                  <label class="form-label" for="form9Example4">Zip</label>
+                  <input type="text" name="zip" ngModel class="form-control" id="form9Example4" class="form-control input-custom" />                  
+                </div>
+              </div>
+            </div>          
+            <div class="float-end ">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-rounded"
+                style="background-color: #0062CC ;">Submit</button>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
